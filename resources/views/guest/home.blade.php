@@ -80,6 +80,10 @@
             @endif
 
             <div class="content">
+                @if (Auth::check())
+                    Benvenuto {{ Auth::user()["name"] }}!
+                @endif
+                
                 <div class="title m-b-md">
                     Laravel
                 </div>
