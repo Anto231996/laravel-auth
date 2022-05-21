@@ -17,7 +17,11 @@ Auth::routes();
 
 Route::get('/home', 'Guest\HomeController@index')->name('home');
 
-Route::middleware('auth')->namespace('Admin')->prefix("admin")->name('admin.')->group(function(){
+Route::middleware('auth')
+->namespace('Admin')
+->prefix("admin")
+->name('admin.')
+->group(function(){
     Route::get('/', 'HomeController@index')->name('home');
     Route::resource('posts', 'PostController');
 });

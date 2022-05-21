@@ -18,7 +18,7 @@ class PostsSeeder extends Seeder
             $newPost->title = $faker->words(2,true);
             $newPost->author = $faker->name();
             $newPost->content = $faker->paragraph(5,true);
-            $newPost->image_url = "https://picsum.photos/id/$i/350/500";
+            $newPost->image_url = "https://picsum.photos/id/$i/350/350";
             $newPost->save();
         }
     }
